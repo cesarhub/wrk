@@ -8,6 +8,16 @@
   processing, and custom reporting. Details are available in SCRIPTING and
   several examples are located in [scripts/](scripts/).
 
+## Build
+https://medium.com/@felipedutratine/intelligent-benchmark-with-wrk-163986c1587f
+sudo apt-get install build-essential libssl-dev git -y
+sudo apt-get install unzip
+git clone https://github.com/wg/wrk.git wrk
+cd wrk
+sudo make
+# move the executable to somewhere in your PATH, ex:
+sudo cp wrk /usr/local/bin
+
 ## Basic Usage
 
     wrk -t12 -c400 -d30s http://127.0.0.1:8080/index.html
